@@ -23,7 +23,7 @@ public class WaterExamples : MonoBehaviour
         SetExample(0);
 
         foreach (GameObject e in Examples) {
-            e.active = false;
+            e.gameObject.SetActive(false);
         }
 
         start = false;
@@ -36,7 +36,7 @@ public class WaterExamples : MonoBehaviour
         start = true;
 
         GameObject currentExample = Examples[example-1];
-        currentExample.active = true;
+        currentExample.gameObject.SetActive(true);
     }
     
     public void SetExample(int value) {
@@ -75,6 +75,7 @@ public class WaterExamples : MonoBehaviour
             break;
         }
         exampleValue.text = text;
+        
     }
 
     void Update() { 
